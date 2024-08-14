@@ -178,6 +178,7 @@ p {
   border-radius: 4px;
   padding: 5px;
   background-color: #f9f9f9;
+  overflow: scroll;
 
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -342,4 +343,22 @@ ul {
 /* responsive */
 
 @media (max-width: 767px) {
+}
+
+.sign-up-container {
+  border: 1px solid black;
+  margin-bottom: 3rem;
+}
+#survey-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.CSknockouts {
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
