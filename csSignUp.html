@@ -50,41 +50,48 @@
 
 
     <section class="sign-up-form">
-        <div class="sign-up-container">
+        <!----------    Sign Up Form ----------->
 
-            <form id="survey-form"> <!-- To target the form in CSS,  you need to do it like this "#survey-form" and any other elements that has an id-->
-                <!-- Label/input for name  -->
-                <label for="name" id="name-label">Name:</label>
-                <input type="text" id="name" required placeholder="Enter your Name">
+        
 
-                <!-- Label/input for surname  -->
-                <label for="surname" id="surname-label">Email:</label>
-                <input type="text" id="surname" required placeholder="Enter your Email">
+        <section class="sign-up-form">
+            <div class="sign-up-container">
 
-                <!-- Label/input for email -->
-                <label for="email" id="email-label">Last Name:</label>
-                <input type="email" id="email" required placeholder="Enter your Surname">
+                <form id="survey-form"> <!-- To target the form in CSS,  you need to do it like this "#survey-form" and any other elements that has an id-->
+                    <!-- Label/input for name  -->
+                    <label for="name" id="name-label">Name:</label>
+                    <input type="text" id="name" required placeholder="Enter your Name">
 
-                <!-- Label/input for  dropdown-->
-                <label for="dropdown" id="dropdown-label">What course are you studying</label>
-                <select id="dropdown" required>
-                    <option value="Select">Select</option>
-                    <option value="computer-science">Computer Science</option>
-                    <option value="engineering">Engineering</option>
-                    <option value="Law">Law</option>
-                    <option value="Business">Business</option>
-                    <option value="Accounting">Accounting</option>
-                    <option value="Economics">Economics</option>
-                    <option value="Other">Other</option>
+                    <!-- Label/input for surname  -->
+                    <label for="surname" id="surname-label">Email:</label>
+                    <input type="text" id="surname" required placeholder="Enter your Email">
 
-                    <label for="team-ID" id="team-ID-label">Team ID:</label>
-                <input type="team ID" id="team ID" required placeholder="Enter your email ID">
+                    <!-- Label/input for email -->
+                    <label for="email" id="email-label">Surname:</label>
+                    <input type="email" id="email" required placeholder="Enter your Surname">
 
-                
+                    <!-- Label/input for  dropdown-->
+                    <label for="dropdown" id="dropdown-label">What course are you studying</label>
+                    <select id="dropdown" required>
+                        <option value="Select">Select</option>
+                        <option value="computer-science">Computer Science</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="Law">Law</option>
+                        <option value="Business">Business</option>
+                        <option value="Accounting">Accounting</option>
+                        <option value="Economics">Economics</option>
+                        <option value="Other">Other</option>
+                        
+                    </select>
 
-               
+                    <label for="team-name" id="team-label"> What ID is your team</label>
+                        <input type="text" name="team-name" id="team-name">
 
-                    <!-- <label for="team-name" id="team-label"></label>
-                    <input type="text" name="team-name" id="team-name"> -->
+
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+        </section>
+
   </body>
 </html>
