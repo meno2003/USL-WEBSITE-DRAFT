@@ -21,6 +21,18 @@ body {
   background-size: cover;
   position: relative;
 }
+.headerCS {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(186, 186, 186, 0.7),
+      rgba(226, 48, 4, 0)
+    ),
+    url(BlurryBackdrop_CS.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
 
 nav {
   display: flex;
@@ -178,6 +190,7 @@ p {
   border-radius: 4px;
   padding: 5px;
   background-color: #f9f9f9;
+  overflow: scroll;
 
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -342,4 +355,23 @@ ul {
 /* responsive */
 
 @media (max-width: 767px) {
+}
+
+.sign-up-container {
+  margin-bottom: 3rem;
+  padding: 30px;
+  padding-bottom: 70px;
+}
+#survey-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.CSknockouts {
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
