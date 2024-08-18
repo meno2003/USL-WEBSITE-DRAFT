@@ -21,6 +21,18 @@ body {
   background-size: cover;
   position: relative;
 }
+.headerCS {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(186, 186, 186, 0.7),
+      rgba(226, 48, 4, 0)
+    ),
+    url(BlurryBackdrop_CS.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
 
 nav {
   display: flex;
@@ -168,66 +180,52 @@ p {
 }
 
 .select_degree {
-  height: 750px;
-  width: 90%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 10%;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 10px;
-  justify-content: space-around;
+  padding: 30px;
+  height: 800px;
 }
 .container_responsive {
   width: 100%;
   height: 650px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 0px;
-  background-color: #f9f9f9;
-
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-.card_container {
-  width: 230px;
-  height: 300px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
   padding: 5px;
   background-color: #f9f9f9;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  overflow: scroll;
+
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
+}
+.row1 {
+  width: 100%;
+  height: 200px;
+  margin-top: 50px;
+  padding-left: 80px;
+}
+.row2 {
+  width: 100%;
+  height: 200px;
+  margin-top: 65px;
+  padding-left: 80px;
+}
+.col {
+  display: inline-block;
+  margin: 25px;
+  overflow: hidden;
 }
 
-
 .image {
-  height: 50%;
-  width: 50%;
+  height: 200px;
+  width: 200px;
   background-size: cover;
   background-repeat: no-repeat;
   transition: all 0.6s;
   -o-transition: all 0.6s;
   -webkit-transition: all 0.6s;
   -moz-transition: all 0.6s;
-  padding: 20px;
- align-items: center;
-}
-
-.image-border{
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
-  border: solid 40px;
-  
 }
 
 .shirt1 {
-  background-image: url(Engineering_Shirt.png);
+  background-image: url(Engineering.png);
 }
 .shirt2 {
   background-image: url(Accounting_Shirt.png);
@@ -357,4 +355,130 @@ ul {
 /* responsive */
 
 @media (max-width: 767px) {
+}
+
+/* -- sign up form -- */
+.sign-up-form {
+  background-color: #f4f4f9;
+  padding: 40px 20px;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container */
+.sign-up-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Image container */
+.image-container {
+  flex: 1;
+  max-width: 40%;
+}
+
+.image-container img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover; 
+  border-radius: 8px;
+}
+
+/* Form  */
+#survey-form {
+  flex: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Label */
+#survey-form label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Input */
+#survey-form input[type="text"],
+#survey-form input[type="email"],
+#survey-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+#survey-form input[type="text"]:focus,
+#survey-form input[type="email"]:focus,
+#survey-form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Dropdown */
+#survey-form select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="%23333" stroke-width="2" d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+  cursor: pointer;
+}
+
+/* Submit button */
+.submitbutton {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitbutton:hover {
+  background-color: #0056b3;
+}
+
+/* responsiveness */
+@media (max-width: 768px) {
+  .sign-up-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .image-container {
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+}
+
+
+
+.CSknockouts {
+  min-height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
