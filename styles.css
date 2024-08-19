@@ -173,27 +173,61 @@ p {
 
 .degree_title {
   width: 80%;
-  margin: auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-align: center;
+  height: 20%;
+  margin-top: 20px;
+
+  justify-content: center;
 }
 
 .select_degree {
-  padding: 30px;
-  height: 800px;
+  height: 100%vh;
+  width: 90%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: space-around;
 }
+
+.degree_select {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+/*
 .container_responsive {
   width: 100%;
   height: 650px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 5px;
+  padding: 0px;
   background-color: #f9f9f9;
   overflow: scroll;
 
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}*/
+
+.card_container {
+  width: 230px;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #f9f9f9;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 20px;
+  padding-bottom: 10px;
+  align-items: center;
 }
 .row1 {
   width: 100%;
@@ -214,39 +248,43 @@ p {
 }
 
 .image {
-  height: 200px;
-  width: 200px;
+  height: 50%;
+  width: 70%;
   background-size: cover;
   background-repeat: no-repeat;
   transition: all 0.6s;
   -o-transition: all 0.6s;
   -webkit-transition: all 0.6s;
   -moz-transition: all 0.6s;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
 }
 
 .shirt1 {
-  background-image: url(Engineering.png);
+  background-image: url(Engineering-removebg-preview.png);
 }
 .shirt2 {
-  background-image: url(Accounting_Shirt.png);
+  background-image: url(Accounting_Shirt-removebg-preview.png);
 }
 .shirt3 {
-  background-image: url(Journalism_Shirt.png);
+  background-image: url(Journalism_Shirt-removebg-preview.png);
 }
 .shirt4 {
-  background-image: url(ActurialScience_Shirt.png);
+  background-image: url(ActurialScience_Shirt-removebg-preview.png);
 }
 .shirt5 {
-  background-image: url(ComputerScience_Shirt.png);
+  background-image: url(ComputerScience_Shirt-removebg-preview.png);
 }
 .shirt6 {
-  background-image: url(BusinessShirt.png);
+  background-image: url(BusinessShirt-removebg-preview.png);
 }
 .shirt7 {
-  background-image: url(Biomedicine_Shirt.png);
+  background-image: url(Biomedicine_Shirt-removebg-preview.png);
 }
 .shirt8 {
-  background-image: url(Law_Shirt.png);
+  background-image: url(Law_Shirt-removebg-preview.png);
 }
 
 .footer {
@@ -257,20 +295,19 @@ p {
 .footer_container {
   max-width: 1170px;
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 ul {
   list-style: none;
 }
 
-.f_row {
-  display: flex;
-  flex-wrap: wrap;
-}
 .f_column {
-  width: 20%;
+  width: 200px;
   padding: 0 15px;
   padding-left: 30px;
+  padding-bottom: 30px;
 }
 
 .f_column h4 {
@@ -310,6 +347,7 @@ ul {
   font-weight: 300;
   color: #bbbbbb;
   display: block;
+  padding-left: 0;
 }
 .f_column ul li a {
   font-size: 16px;
@@ -357,17 +395,128 @@ ul {
 @media (max-width: 767px) {
 }
 
+/* -- sign up form -- */
+
+sign-up-form {
+  background-color: #f4f4f9;
+  padding: 40px 20px;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container */
 .sign-up-container {
-  margin-bottom: 3rem;
-  padding: 30px;
-  padding-bottom: 70px;
-}
-#survey-form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 40px;
 }
+
+/* Image container */
+.image-container {
+  flex: 1;
+  max-width: 40%;
+}
+
+.image-container img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Form */
+survey-form {
+  flex: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 50%;
+}
+.survey_form_styling {
+  padding-top: 100px;
+}
+
+/* Label */
+#survey-form label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Input */
+#survey-form input[type="text"],
+#survey-form input[type="email"],
+#survey-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+#survey-form input[type="text"]:focus,
+#survey-form input[type="email"]:focus,
+#survey-form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Dropdown */
+#survey-form select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="%23333" stroke-width="2" d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px;
+  cursor: pointer;
+}
+
+/* Submit button */
+.submitbutton {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitbutton:hover {
+  background-color: #0056b3;
+}
+
+/* responsiveness */
+@media (max-width: 768px) {
+  .sign-up-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
 .CSknockouts {
   min-height: 100vh;
   width: 100%;
