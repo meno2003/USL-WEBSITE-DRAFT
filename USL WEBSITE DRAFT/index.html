@@ -30,7 +30,14 @@
 
             <div class="hero_Text"><h1>LEAD YOUR DEGREE TO THE CHAMPIONSHIPS</h1>
             <p> In the first ever University Super League</p>
-            <a href="" class="hero-btn">Sign up </a>  </div> 
+            <button class="hero-btn" onclick="scrollToSection()">Sign up </button>  
+            <script>
+                function scrollToSection() {
+                    document.getElementById("select_degree_id").scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            </script> </div> 
         </section>
 
 
@@ -65,7 +72,7 @@
 
         
 
-        <section class="select_degree">
+        <section class="select_degree" id="select_degree_id">
 
             
             <div class="degree_select"> <h1>SELECT YOUR DEGREE</h1>
