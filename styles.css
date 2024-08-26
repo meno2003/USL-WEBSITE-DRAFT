@@ -396,8 +396,7 @@ ul {
 }
 
 /* -- sign up form -- */
-
-sign-up-form {
+.sign-up-form {
   background-color: #f4f4f9;
   padding: 40px 20px;
   border-radius: 8px;
@@ -411,7 +410,6 @@ sign-up-form {
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  padding: 40px;
 }
 
 /* Image container */
@@ -427,17 +425,13 @@ sign-up-form {
   border-radius: 8px;
 }
 
-/* Form */
-survey-form {
+/* Form  */
+#survey-form {
   flex: 2;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-top: 50%;
-}
-.survey_form_styling {
-  padding-top: 100px;
 }
 
 /* Label */
