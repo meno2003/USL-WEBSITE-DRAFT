@@ -8,6 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
     </head>
     <body>
         <div>
@@ -44,7 +46,7 @@
         <!-------- Description  ------>
         
         <section class="description">
-            <h1> What We're About</h1>
+            <h1> What We're About </h1>
             <p> A league of all degrees in the university with each degree having its own domestic tournament to qualify for the championship!
                 <br> With the best team coming out of each major, we will see which degree prevails <br> in the first edition of the annual University Super League!
             </p>
@@ -55,14 +57,10 @@
 
         <section class="Knockout">
 
-            <div style="position: relative; width: 100%; height: 0; padding-top: 70.7071%;
-            padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-            border-radius: 8px; will-change: transform;">
-             <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-               src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF8iKYN2WQ&#x2F;MWge5gDpeD5qrl_g2RAlWg&#x2F;view?embed">
-             </iframe>
-           </div>
-           <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF8iKYN2WQ&#x2F;MWge5gDpeD5qrl_g2RAlWg&#x2F;view?utm_content=DAF8iKYN2WQ&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a> 
+            
+             <img style="width: 100%;" src = "Mainbracket.svg" alt="bracket SVG"/>
+           
+           
 
 
         </section>
@@ -79,57 +77,57 @@
             </div>
 
 
-            <div class="card_container">
-                <div class="degree_title">Engineering</div>
+            <div class="card_container" onclick="window.location.href='engineeringSignUp.html'">
+                <div class="degree_title"><h3>Engineering</h3></div>
                     <div class="image shirt1"></div>
                 
             </div>
 
-             <div class="card_container">
-                <div class="degree_title">Optometry</div>
+             <div class="card_container" onclick="window.location.href='hsSignUp.html'">
+                <div class="degree_title"><h3>Human Sciences</h3></div>
                 <div class="image shirt2"></div>
                     
                 
 
              </div>
 
-             <div class="card_container">
-                <div class="degree_title">Politics</div>
+             <div class="card_container" onclick="window.location.href='artSignUp.html'">
+                <div class="degree_title"><h3>Arts & Media</h3></div>
                 <div class="image shirt3"></div>
                     
                 
              </div>
 
-             <div class="card_container">
-                <div class="degree_title">Law</div>
+             <div class="card_container" onclick="window.location.href='lawSignUp.html'">
+                <div class="degree_title"><h3>Law</h3></div>
                 <div class="image shirt4"></div>
                     
                 
              </div>
 
              <div class="card_container" onclick="window.location.href='csSignUp.html'">
-                <div class="degree_title"> Computer Science </div>
+                <div class="degree_title"> <h3>Computer Science</h3> </div>
                 <div class="image shirt5"></a></div>
                     
             
              </div>
 
-             <div class="card_container">
-                <div class="degree_title">Journalism</div>
+             <div class="card_container" onclick="window.location.href='AccountingSignUp.html'">
+                <div class="degree_title"><h3>Accounting</h3></div>
                 <div class="image shirt6"></div>
                 
              </div>
 
-             <div class="card_container">
-                <div class="degree_title"> Mathematics</div>
+             <div class="card_container" onclick="window.location.href='mathematicsSignUp.html'">
+                <div class="degree_title"> <h3>Mathematics</h3></div>
                 <div class="image shirt7"></div>
                    
 
              </div>
 
 
-             <div class="card_container">
-                <div class="degree_title"> Business</div>
+             <div class="card_container" onclick="window.location.href='businessSignUp.html'">
+                <div class="degree_title"> <h3>Business</h3></div>
                 <div class="image shirt8"></div>
                    
 
@@ -210,20 +208,31 @@
         <!------Javascript for toggle menu ---------->
 
         <script>
-
+            // What Ijtihad added
             var navLinks = document.getElementById("navLinks");
+            
+            adjustMenu(); // Ensure the menu is correctly displayed based on screen size on page load
+            window.addEventListener('resize', adjustMenu); // Adjust the menu on window resize
+            function adjustMenu() {
+                if (window.innerWidth > 700) {
+                    showMenu(); // Show the menu on larger screens
+                } else {
+                    hideMenu(); // Hide the menu on smaller screens
+                }
+}
 
             function showMenu(){
-                navLinks.style.right = "0"
+                //navLinks.style.right = "0"
+                navLinks.style.display = "flex"
             }
 
             function hideMenu(){
-                navLinks.style.right = "-200px"
+                //navLinks.style.right = "-200px"
+                navLinks.style.display = "none"
             }
 
-
+            
         </script>
-
 
         </div>
     </body>
