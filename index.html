@@ -10,6 +10,7 @@
 
     </head>
     <body>
+        <div>
         <section class = "header">
             <nav>
                 
@@ -29,7 +30,14 @@
 
             <div class="hero_Text"><h1>LEAD YOUR DEGREE TO THE CHAMPIONSHIPS</h1>
             <p> In the first ever University Super League</p>
-            <a href="" class="hero-btn">Sign up </a>  </div> 
+            <button class="hero-btn" onclick="scrollToSection()">Sign up </button>  
+            <script>
+                function scrollToSection() {
+                    document.getElementById("select_degree_id").scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            </script> </div> 
         </section>
 
 
@@ -64,49 +72,77 @@
 
         
 
-        <section class="select_degree">
-          
-         <div class="card_container">
-            <div class="degree_title">
-                Engineering
-            </div>
-        </div>
-         <div class="card_container">
-            <div class="degree_title">
-                Computer Science
-            </div>
-         </div>
-         <div class="card_container">
-            <div class="degree_title">
-                Politics
-            </div>
-         </div>
-         <div class="card_container">
-            <div class="degree_title">
-                Law
-            </div>
-         </div>
-         <div class="card_container">
-            <div class="degree_title">
-                Optometry
-            </div>
-         </div>
-         <div class="card_container">
-            <div class="degree_title">
-                Journalism
-            </div>
-         </div>
-         <div class="card_container">
-            <div class="degree_title">
-                Mathematics
-            </div>
-         </div>
-         <div class="card_container">
-            <div class="degree_title">
-                Business
-            </div>
-         </div>
+        <section class="select_degree" id="select_degree_id">
 
+            
+            <div class="degree_select"> <h1>SELECT YOUR DEGREE</h1>
+            </div>
+
+
+            <div class="card_container">
+                <div class="degree_title">Engineering</div>
+                    <div class="image shirt1"></div>
+                
+            </div>
+
+             <div class="card_container">
+                <div class="degree_title">Optometry</div>
+                <div class="image shirt2"></div>
+                    
+                
+
+             </div>
+
+             <div class="card_container">
+                <div class="degree_title">Politics</div>
+                <div class="image shirt3"></div>
+                    
+                
+             </div>
+
+             <div class="card_container">
+                <div class="degree_title">Law</div>
+                <div class="image shirt4"></div>
+                    
+                
+             </div>
+
+             <div class="card_container" onclick="window.location.href='csSignUp.html'">
+                <div class="degree_title"> Computer Science </div>
+                <div class="image shirt5"></a></div>
+                    
+            
+             </div>
+
+             <div class="card_container">
+                <div class="degree_title">Journalism</div>
+                <div class="image shirt6"></div>
+                
+             </div>
+
+             <div class="card_container">
+                <div class="degree_title"> Mathematics</div>
+                <div class="image shirt7"></div>
+                   
+
+             </div>
+
+
+             <div class="card_container">
+                <div class="degree_title"> Business</div>
+                <div class="image shirt8"></div>
+                   
+
+             </div>
+
+
+
+
+
+
+
+          
+         
 
 
     
@@ -120,13 +156,13 @@
 
        <footer class="footer">
         <div class="footer_container">
-            <div class="f_row">
+            
                 <div class="f_column">
                     <img class="footer_logo" src="transparent_logo.png" alt="USL">
-                    <h4 class="usl_footertitle">University Super League bruh </h4>
+                    <h4 class="usl_footertitle">University Super League </h4>
                     <p>
                         We are a football tournament that hosts students across different disciplines getting the chance of meeting new
-                         people and also having the oppertunity to be crowned this years
+                         people and also having the opportunity to be crowned this year's
                           <span class="footer_champ"> USL Champions!  </span>
                        
                     </p>
@@ -161,7 +197,7 @@
                 </div>
                 </div>
 
-            </div>
+            
         </div>
        </footer>
 
@@ -189,5 +225,6 @@
         </script>
 
 
+        </div>
     </body>
 </html>
