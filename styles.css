@@ -118,6 +118,10 @@ nav .fa {
   display: none;
 }
 
+.MainBracket {
+  width: 100%;
+}
+
 @media (max-width: 700px) {
   .hero_Text h1 {
     font-size: 20px;
@@ -300,6 +304,7 @@ p {
 .footer {
   background-color: #24262b;
   padding: 70px;
+  flex-direction: row;
 }
 
 .footer_container {
@@ -538,4 +543,26 @@ ul {
     background-size: cover;
     position: relative;
   }
+}
+
+.week1 {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(186, 186, 186, 0.7),
+      rgba(226, 48, 4, 0)
+    ),
+    url(less_blur_backdrop.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 800px;
+}
+.week1Header {
+  text-align: left;
+  padding-top: 0;
+  padding-bottom: 300px;
+  padding-left: 30px;
+}
+.week1Container {
 }
