@@ -16,7 +16,7 @@ body {
       rgba(186, 186, 186, 0.7),
       rgba(226, 48, 4, 0)
     ),
-    url(less_blur_backdrop.png);
+    url('assets/backdrops/less_blur_backdrop.png');
   background-position: center;
   background-size: cover;
   position: relative;
@@ -28,7 +28,7 @@ body {
       rgba(186, 186, 186, 0.7),
       rgba(226, 48, 4, 0)
     ),
-    url(BlurryBackdrop_CS.png);
+    url('assets/backdrops/BlurryBackdrop_CS.png');
   background-position: center;
   background-size: cover;
   position: relative;
@@ -44,6 +44,8 @@ nav {
 .nav-links {
   flex: 1;
   text-align: right;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav-links ul li {
@@ -116,6 +118,10 @@ nav .fa {
   display: none;
 }
 
+.MainBracket {
+  width: 100%;
+}
+
 @media (max-width: 700px) {
   .hero_Text h1 {
     font-size: 20px;
@@ -126,12 +132,15 @@ nav .fa {
   .nav-links {
     position: absolute;
     background: #f44336;
-    height: 100vh;
+    height: 100%;
     width: 200px;
     top: 0;
-    right: -200;
-    text-align: left;
-    z-index: 2;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     transition: 1s;
   }
   nav .fa {
@@ -153,8 +162,8 @@ nav .fa {
   width: 80%;
   margin: auto;
   text-align: center;
-  padding-top: 100px;
-  padding-bottom: 30px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 h1 {
@@ -169,6 +178,14 @@ p {
   line-height: 22px;
   padding: 30px;
   font-family: "Poppins", sans-serif;
+}
+
+.WWW {
+  max-width: 600px;  /* Set the maximum width for the paragraph */
+  margin: 0 auto;    /* Center the element horizontally */
+  padding: 10px;     /* Optional: Add some padding for better readability */
+  line-height: 1.6;  /* Optional: Adjust line-height for better text spacing */
+  text-align: center;
 }
 
 .degree_title {
@@ -268,33 +285,34 @@ p {
 }
 
 .shirt1 {
-  background-image: url(Engineering-removebg-preview.png);
+  background-image: url('assets/shirts/Engineering-removebg-preview.png');
 }
 .shirt2 {
-  background-image: url(Accounting_Shirt-removebg-preview.png);
+  background-image: url('assets/shirts/Accounting_Shirt-removebg-preview.png');
 }
 .shirt3 {
-  background-image: url(Journalism_Shirt-removebg-preview.png);
+  background-image: url('assets/shirts/Journalism_Shirt-removebg-preview.png');
 }
 .shirt4 {
-  background-image: url(ActurialScience_Shirt-removebg-preview.png);
+  background-image: url('assets/shirts/ActurialScience_Shirt-removebg-preview.png');
 }
 .shirt5 {
-  background-image: url(ComputerScience_Shirt-removebg-preview.png);
+  background-image: url('assets/shirts/ComputerScience_Shirt-removebg-preview.png');
 }
 .shirt6 {
-  background-image: url(BusinessShirt-removebg-preview.png);
+  background-image: url('assets/shirts/BusinessShirt-removebg-preview.png');
 }
 .shirt7 {
-  background-image: url(Biomedicine_Shirt-removebg-preview.png);
+  background-image: url('assets/shirts/Biomedicine_Shirt-removebg-preview.png');
 }
 .shirt8 {
-  background-image: url(Law_Shirt-removebg-preview.png);
+  background-image: url('assets/shirts/Law_Shirt-removebg-preview.png');
 }
 
 .footer {
-  background-color: 24262b;
+  background-color: #24262b;
   padding: 70px;
+  flex-direction: row;
 }
 
 .footer_container {
@@ -409,7 +427,8 @@ ul {
   max-width: 900px;
   margin: 0 auto;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  padding-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* Container */
@@ -492,7 +511,7 @@ ul {
 .submitbutton {
   width: 100%;
   padding: 14px;
-  background-color: #007bff;
+  background-color: 24262b;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -500,11 +519,11 @@ ul {
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.6s ease;
 }
 
 .submitbutton:hover {
-  background-color: #0056b3;
+  background-color: #000000;
 }
 
 /* responsiveness */
@@ -532,4 +551,26 @@ ul {
     background-size: cover;
     position: relative;
   }
+}
+
+.week1 {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(186, 186, 186, 0.7),
+      rgba(226, 48, 4, 0)
+    ),
+    url('assets/backdrops/less_blur_backdrop.png');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 800px;
+}
+.week1Header {
+  text-align: left;
+  padding-top: 0;
+  padding-bottom: 300px;
+  padding-left: 30px;
+}
+.week1Container {
 }
