@@ -16,7 +16,7 @@ body {
       rgba(186, 186, 186, 0.7),
       rgba(226, 48, 4, 0)
     ),
-    url(less_blur_backdrop.png);
+    url('assets/backdrops/less_blur_backdrop.png');
   background-position: center;
   background-size: cover;
   position: relative;
@@ -28,7 +28,7 @@ body {
       rgba(186, 186, 186, 0.7),
       rgba(226, 48, 4, 0)
     ),
-    url(BlurryBackdrop_CS.png);
+    url('assets/backdrops/BlurryBackdrop_CS.png');
   background-position: center;
   background-size: cover;
   position: relative;
@@ -285,28 +285,28 @@ p {
 }
 
 .shirt1 {
-  background-image: url(Engineering-removebg-preview.png);
+  background-image: url('assets/shirts/Engineering-removebg-preview.png');
 }
 .shirt2 {
-  background-image: url(Accounting_Shirt-removebg-preview.png);
+  background-image: url('assets/shirts/Accounting_Shirt-removebg-preview.png');
 }
 .shirt3 {
-  background-image: url(Journalism_Shirt-removebg-preview.png);
+  background-image: url('assets/shirts/Journalism_Shirt-removebg-preview.png');
 }
 .shirt4 {
-  background-image: url(ActurialScience_Shirt-removebg-preview.png);
+  background-image: url('assets/shirts/ActurialScience_Shirt-removebg-preview.png');
 }
 .shirt5 {
-  background-image: url(ComputerScience_Shirt-removebg-preview.png);
+  background-image: url('assets/shirts/ComputerScience_Shirt-removebg-preview.png');
 }
 .shirt6 {
-  background-image: url(BusinessShirt-removebg-preview.png);
+  background-image: url('assets/shirts/BusinessShirt-removebg-preview.png');
 }
 .shirt7 {
-  background-image: url(Biomedicine_Shirt-removebg-preview.png);
+  background-image: url('assets/shirts/Biomedicine_Shirt-removebg-preview.png');
 }
 .shirt8 {
-  background-image: url(Law_Shirt-removebg-preview.png);
+  background-image: url('assets/shirts/Law_Shirt-removebg-preview.png');
 }
 
 .footer {
@@ -560,7 +560,7 @@ ul {
       rgba(186, 186, 186, 0.7),
       rgba(226, 48, 4, 0)
     ),
-    url(less_blur_backdrop.png);
+    url('assets/backdrops/less_blur_backdrop.png');
   background-position: center;
   background-size: cover;
   position: relative;
