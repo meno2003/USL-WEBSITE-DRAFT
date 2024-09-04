@@ -181,10 +181,10 @@ p {
 }
 
 .WWW {
-  max-width: 600px;  /* Set the maximum width for the paragraph */
-  margin: 0 auto;    /* Center the element horizontally */
-  padding: 10px;     /* Optional: Add some padding for better readability */
-  line-height: 1.6;  /* Optional: Adjust line-height for better text spacing */
+  max-width: 600px; /* Set the maximum width for the paragraph */
+  margin: 0 auto; /* Center the element horizontally */
+  padding: 10px; /* Optional: Add some padding for better readability */
+  line-height: 1.6; /* Optional: Adjust line-height for better text spacing */
   text-align: center;
 }
 
@@ -569,8 +569,6 @@ ul {
 .week1Header {
   text-align: left;
   padding-top: 0;
-  padding-bottom: 300px;
+  padding-bottom: 500px;
   padding-left: 30px;
-}
-.week1Container {
 }
