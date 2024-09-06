@@ -91,7 +91,7 @@
       </div>
 
 
-      <div class="card_container" onclick="window.location.href='engineeringSignUp.html'">
+      <div class="card_container" onclick="switchPageEngineering()">
         <div class="degree_title">
           <h3>Engineering</h3>
         </div>
@@ -99,7 +99,7 @@
 
       </div>
 
-      <div class="card_container" onclick="window.location.href='hsSignUp.html'">
+      <div class="card_container" onclick="switchPageHuman()">
         <div class="degree_title">
           <h3>Human Sciences</h3>
         </div>
@@ -109,7 +109,7 @@
 
       </div>
 
-      <div class="card_container" onclick="window.location.href='artSignUp.html'">
+      <div class="card_container" onclick="switchPageArt()">
         <div class="degree_title">
           <h3>Arts & Media</h3>
         </div>
@@ -118,7 +118,7 @@
 
       </div>
 
-      <div class="card_container" onclick="window.location.href='lawSignUp.html'">
+      <div class="card_container" onclick="switchPageLaw()">
         <div class="degree_title">
           <h3>Law</h3>
         </div>
@@ -127,7 +127,7 @@
 
       </div>
 
-      <div class="card_container" onclick="window.location.href='csSignUp.html'">
+      <div class="card_container" onclick="switchPageCS()">
         <div class="degree_title">
           <h3>Computer Science</h3>
         </div>
@@ -136,7 +136,7 @@
 
       </div>
 
-      <div class="card_container" onclick="window.location.href='AccountingSignUp.html'">
+      <div class="card_container" onclick="switchPageAccounting()">
         <div class="degree_title">
           <h3>Accounting</h3>
         </div>
@@ -144,7 +144,7 @@
 
       </div>
 
-      <div class="card_container" onclick="window.location.href='mathematicsSignUp.html'">
+      <div class="card_container" onclick="switchPageMaths()">
         <div class="degree_title">
           <h3>Mathematics</h3>
         </div>
@@ -154,7 +154,7 @@
       </div>
 
 
-      <div class="card_container" onclick="window.location.href='businessSignUp.html'">
+      <div class="card_container" onclick="switchPageBusiness()">
         <div class="degree_title">
           <h3>Business</h3>
         </div>
@@ -255,6 +255,47 @@
       function hideMenu() {
         //navLinks.style.right = "-200px"
         navLinks.style.display = "none"
+      }
+
+      function switchPageEngineering(){
+        localStorage.setItem("Course", "ENGINEERING QUALIFIERS");
+        console.log(localStorage.getItem("Course"));
+        window.location.href = 'SignUp.html';
+      }
+      function switchPageHuman(){
+        localStorage.setItem("Course", "HUMAN SCIENCES QUALIFIERS");
+        console.log(localStorage.getItem("Course"));
+        window.location.href = 'SignUp.html';
+      }
+      function switchPageArt(){
+        localStorage.setItem("Course", "ARTS & MEDIA QUALIFIERS");
+        console.log(localStorage.getItem("Course"));
+        window.location.href = 'SignUp.html';
+      }
+      function switchPageLaw(){
+        localStorage.setItem("Course", "LAW QUALIFIERS");
+        console.log(localStorage.getItem("Course"));
+        window.location.href = 'SignUp.html';
+      }
+      function switchPageCS(){
+        localStorage.setItem("Course", "COMPUTER SCIENCE QUALIFIERS");
+        console.log(localStorage.getItem("Course"));
+        window.location.href = 'SignUp.html';
+      }
+      function switchPageAccounting(){
+        localStorage.setItem("Course", "ACCOUNTING QUALIFIERS");
+        console.log(localStorage.getItem("Course"));
+        window.location.href = 'SignUp.html';
+      }
+      function switchPageBusiness(){
+        localStorage.setItem("Course", "BUSINESS QUALIFIERS");
+        console.log(localStorage.getItem("Course"));
+        window.location.href = 'SignUp.html';
+      }
+      function switchPageMaths(){
+        localStorage.setItem("Course", "MATHEMATICS QUALIFIERS");
+        console.log(localStorage.getItem("Course"));
+        window.location.href = 'SignUp.html';
       }
     </script>
 
