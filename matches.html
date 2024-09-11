@@ -69,7 +69,7 @@
         </div>
       </section>
     </div>
-  </body>
+  
 
   <footer class="footer">
     <div class="footer_container">
@@ -118,4 +118,29 @@
       </div>
     </div>
   </footer>
+  <script>
+    // What Ijtihad added
+    var navLinks = document.getElementById("navLinks");
+
+    adjustMenu(); // Ensure the menu is correctly displayed based on screen size on page load
+    window.addEventListener('resize', adjustMenu); // Adjust the menu on window resize
+    function adjustMenu() {
+      if (window.innerWidth > 700) {
+        showMenu(); // Show the menu on larger screens
+      } else {
+        hideMenu(); // Hide the menu on smaller screens
+      }
+    }
+    function showMenu() {
+        //navLinks.style.right = "0"
+        navLinks.style.display = "flex"
+      }
+
+      function hideMenu() {
+        //navLinks.style.right = "-200px"
+        navLinks.style.display = "none"
+      }
+
+    </script> 
+    </html>
 </html>

@@ -188,7 +188,7 @@ p {
   text-align: center;
 }
 
-.degree_title {
+.degree_title_conntainer {
   width: 80%;
   height: 20%;
   margin-top: 20px;
@@ -208,6 +208,7 @@ p {
   flex-wrap: wrap;
   row-gap: 10px;
   justify-content: space-around;
+  align-items: center;
 }
 
 .degree_select {
@@ -309,6 +310,62 @@ p {
   background-image: url("assets/shirts/Law_Shirt-removebg-preview.png");
 }
 
+@media (max-width: 768px) {
+  .select_degree {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .card_container {
+    width: calc(40% - 15px);
+    flex: 0 0 calc(50% - 15px); /* Force the width */
+    max-width: calc(50% - 5px); /* Ensure it doesn't grow larger */
+    height: auto;
+    aspect-ratio: 3 / 4;
+    margin: 0 0 10px 0; /* Remove any default margins */
+  }
+
+  .image {
+    height: 60%;
+    width: 80%;
+  }
+  .degree_select {
+    width: 80%;
+    height: auto;
+  }
+
+  .degree_title h3 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .select_degree {
+    width: 90%;
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+  }
+
+  .card_container {
+    width: calc(40% - 2.5px);
+    flex: 0 0 calc(40% - 2.5px);
+    max-width: calc(40% - 2.5px);
+  }
+
+  .image {
+    height: 50%;
+    width: 70%;
+  }
+
+  .degree_title h3 {
+    font-size: 12px;
+  }
+}
 .footer {
   background-color: #24262b;
   padding: 70px;
@@ -413,9 +470,11 @@ ul {
   font-weight: bold;
 }
 
-/* responsive */
-
-@media (max-width: 767px) {
+@media (max-width: 480px) {
+  .f_column .social-links {
+    display: flex;
+    margin: 0;
+  }
 }
 
 /* -- sign up form -- */
@@ -449,6 +508,13 @@ ul {
   flex: 1;
   max-width: 40%;
   padding-top: 300px;
+}
+
+/* fix this shit */
+
+.cupImage {
+  size: 50%;
+  background-size: auto;
 }
 
 .image-container img {
