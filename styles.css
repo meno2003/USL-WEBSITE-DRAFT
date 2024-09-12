@@ -192,7 +192,7 @@ p {
 
 .degree_title_container {
   width: 100%;
-  height: 20%;
+  height: 10%;
   margin-bottom: 10px;
   margin-top: 10px;
   justify-content: center;
@@ -242,7 +242,7 @@ p {
 }*/
 
 .card_container {
-  width: 230px;
+  width: 200px;
   height: 300px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -294,38 +294,34 @@ p {
   padding: 20px;
   align-items: center;
   justify-content: center;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 768px) {
   .select_degree {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px;
-    gap: 10px;
+    width: 90%;
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
   }
 
   .card_container {
-    width: calc(40% - 15px);
-    flex: 0 0 calc(50% - 15px); /* Force the width */
-    max-width: calc(50% - 5px); /* Ensure it doesn't grow larger */
-    height: auto;
-    aspect-ratio: 3 / 4;
-    margin: 0 0 10px 0; /* Remove any default margins */
+    width: calc(40% - 2.5px);
+    flex: 0 0 calc(40% - 2.5px);
+    max-width: calc(40% - 2.5px);
   }
 
   .image {
-    height: 60%;
-    width: 80%;
-  }
-  .degree_select {
-    width: 80%;
-    height: auto;
+    height: 40%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
   }
 
   .degree_title h3 {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -349,10 +345,18 @@ p {
     width: 60%;
     display: flex;
     justify-content: center;
+    padding-bottom: 10px;
+  }
+  .Shirts {
+    width: auto;
+    height: 55%;
   }
 
   .degree_title h3 {
     font-size: 12px;
+  }
+  .degree_title_container {
+    padding-bottom: 0;
   }
 }
 .footer {
