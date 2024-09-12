@@ -57,7 +57,17 @@
     </p>
   </section>
 
-  <hr/>
+  <!------------ Knockout Brackets ------------->
+
+  <section class="Knockout">
+
+
+    <img id="bracket" class="MainBracket" src="" alt="bracket SVG" />
+
+
+
+
+  </section>
   <!----------    Sign Up Form ----------->
 
 
@@ -195,8 +205,26 @@
     console.log(localStorage.getItem("Course"));
     var Title = document.getElementById("Title");
     Title.textContent = localStorage.getItem("Course");
+
+    const imgElement = document.getElementById("bracket");
+
+    const srcMap = {
+    "ENGINEERING QUALIFIERS": "assets/brackets/EngineeringQualifiers.svg",
+    "HUMAN SCIENCES QUALIFIERS": "assets/brackets/HumanSciences.svg",
+    "ARTS & MEDIA QUALIFIERS": "assets/brackets/ArtsMediaQualifiers.svg",
+    "LAW QUALIFIERS": "assets/brackets/LAWQUALIFIERS.svg",
+    "COMPUTER SCIENCE QUALIFIERS": "assets/brackets/ComputerScience.svg",
+    "ACCOUNTING QUALIFIERS": "assets/brackets/AccountingQualifiers.svg",
+    "BUSINESS QUALIFIERS": "assets/brackets/BusinessQualifiers.svg",
+    "MATHEMATICS QUALIFIERS": "assets/brackets/MathematicsQualifiers.svg",
+    };
+
+    imgElement.src = srcMap[localStorage.getItem("Course")] || "assets/brackets/Mainbracket.svg";
+
+
+
   </script>
 
 </body>
-  
+
 </html>
