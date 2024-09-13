@@ -16,7 +16,7 @@
         <div>
         <section class = "header">
             <nav>
-                
+
                 <a href="index.html"><img src="assets/logos/transparent_logo.png" ></a>
                 <h1 style="color: #fff; padding-left: 10px;" >  USL</h1>
                 <div class="nav-links" id="navLinks">
@@ -53,16 +53,7 @@
       <p class="WWW"> A league of all degrees in the university with each degree having its own domestic tournament to qualify for the championship!
         With the best team coming out of each major, we will see which degree prevails in the first edition of the annual University Super League!
       </p>
-      <h1>When It Takes Place</h1>
-      <p class="WWW">
-        The qualifiers are scheduled from September 11th to 25th,
-        with the final tournament set to occur right after reading week.
-        To view the complete timetable, click <a href="">here</a>.</p>
-      <!--make the word 'here' into a link to matches page.-->
-      <h1>Where It's Held</h1>
-      <p class="WWW">Matches will be played at Finsbury Leusire Centre EC1V 3PU,
-        only a 10 minute walk away from City University of London.
-        <br><a href="https://maps.app.goo.gl/XVAyqACdBs6bqVv96" target="_blank">Open Location in Google Maps</a></p>
+
     </section>
 
     <!------------ Knockout Brackets ------------->
@@ -82,7 +73,8 @@
 
 
 
-        
+
+
     <section class="select_degree" id="select_degree_id">
 
 
@@ -91,74 +83,74 @@
       </div>
 
 
-      <div class="card_container" onclick="window.location.href='engineeringSignUp.html'">
-        <div class="degree_title">
-          <h3>Engineering</h3>
+      <div class="card_container" onclick="switchPageEngineering()">
+        <div class="degree_title_container">
+          <h3 class="degree_title">Engineering</h3>
         </div>
-        <div class="image shirt1"></div>
+        <div class="Shirts_container"> <img class="Shirts" src="assets/shirts/Engineering-removebg-preview.png" alt="Engineering Shirt"></div>
 
       </div>
 
-      <div class="card_container" onclick="window.location.href='hsSignUp.html'">
-        <div class="degree_title">
-          <h3>Human Sciences</h3>
+      <div class="card_container" onclick="switchPageHuman()">
+        <div class="degree_title_container">
+          <h3 class="degree_title">Human Sciences</h3>
         </div>
-        <div class="image shirt2"></div>
+        <div class="Shirts_container"> <img class="Shirts"src="assets\shirts\ActurialScience_Shirt-removebg-preview.png" alt="Human Science Shirt"></div>
 
-
-
-      </div>
-
-      <div class="card_container" onclick="window.location.href='artSignUp.html'">
-        <div class="degree_title">
-          <h3>Arts & Media</h3>
-        </div>
-        <div class="image shirt3"></div>
 
 
       </div>
 
-      <div class="card_container" onclick="window.location.href='lawSignUp.html'">
-        <div class="degree_title">
-          <h3>Law</h3>
+      <div class="card_container" onclick="switchPageArt()">
+        <div class="degree_title_container">
+          <h3 class="degree_title">Arts & Media</h3>
         </div>
-        <div class="image shirt4"></div>
+        <div class="Shirts_container"><img class="Shirts" src="assets/shirts/Journalism_Shirt-removebg-preview.png" alt="Arts&Media Shirt"></div>
 
 
       </div>
 
-      <div class="card_container" onclick="window.location.href='csSignUp.html'">
-        <div class="degree_title">
-          <h3>Computer Science</h3>
+      <div class="card_container" onclick="switchPageLaw()">
+        <div class="degree_title_container">
+          <h3 class="degree_title">Accounting</h3>
         </div>
-        <div class="image shirt5"></a></div>
+        <div class="Shirts_container"> <img class="Shirts" src="assets/shirts/Accounting_Shirt-removebg-preview.png" alt="Law Shirt"></div>
 
 
       </div>
 
-      <div class="card_container" onclick="window.location.href='AccountingSignUp.html'">
-        <div class="degree_title">
-          <h3>Accounting</h3>
+      <div class="card_container" onclick="switchPageCS()">
+        <div class="degree_title_container">
+          <h3 class="degree_title">Computer Science</h3>
         </div>
-        <div class="image shirt6"></div>
-
-      </div>
-
-      <div class="card_container" onclick="window.location.href='mathematicsSignUp.html'">
-        <div class="degree_title">
-          <h3>Mathematics</h3>
-        </div>
-        <div class="image shirt7"></div>
+        <div class="Shirts_container"> <img class="Shirts" src="assets/shirts/ComputerScience_Shirt-removebg-preview.png" alt="Computer Science Shirt"></a></div>
 
 
       </div>
 
-
-      <div class="card_container" onclick="window.location.href='businessSignUp.html'">
-        <div class="degree_title">
-          <h3>Business</h3>
+      <div class="card_container" onclick="switchPageAccounting()">
+        <div class="degree_title_container">
+          <h3 class="degree_title">Law</h3>
         </div>
-        <div class="image shirt8"></div>
+        <div class="Shirts_container"> <img class="Shirts" src="assets/shirts/Law_Shirt-removebg-preview.png" alt="Accounting Shirts"></div>
+
+      </div>
+
+      <div class="card_container" onclick="switchPageMaths()">
+        <div class="degree_title_container">
+          <h3 class="degree_title">Mathematics</h3>
+        </div>
+        <div class="Shirts_container"> <img class="Shirts" src="assets/shirts/Biomedicine_Shirt-removebg-preview.png" alt="Mathematics Shirts"> </div>
+
+
+      </div>
+
+
+      <div class="card_container" onclick="switchPageBusiness()">
+        <div class="degree_title_container">
+          <h3 class="degree_title">Business</h3>
+        </div>
+        <div class="Shirts_container"> <img class="Shirts" src="assets/shirts/BusinessShirt-removebg-preview.png" alt="Business Shirt"></div>
 
 
       </div>
@@ -174,13 +166,14 @@
 
     </section>
 
+
     <!-- Footer -->
 
 
 
        <footer class="footer">
         <div class="footer_container">
-            
+
                 <div class="f_column">
                     <img class="footer_logo" src="assets/logos/transparent_logo.png" alt="USL">
                     <h4 class="usl_footertitle">University Super League </h4>
@@ -188,7 +181,7 @@
                         We are a football tournament that hosts students across different disciplines getting the chance of meeting new
                          people and also having the opportunity to be crowned this year's
                           <span class="footer_champ"> USL Champions!  </span>
-                       
+
                     </p>
                 </div>
 
@@ -221,203 +214,16 @@
                 </div>
                 </div>
 
-            
-        </div>
-        <i class="fa fa-bars" onclick="showMenu()"></i>
-      </nav>
 
-      <div class="hero_Text">
-        <h1>LEAD YOUR DEGREE TO THE CHAMPIONSHIPS</h1>
-        <p> In the first ever University Super League</p>
-        <button class="hero-btn" onclick="scrollToSection()">Sign up </button>
-        <script>
-          function scrollToSection() {
-            document.getElementById("select_degree_id").scrollIntoView({
-              behavior: 'smooth'
-            });
-          }
-        </script>
-      </div>
-    </section>
-
-
-    <!-------- Description  ------>
-
-    <section class="description">
-      <h1> What We're About </h1>
-      <p class="WWW"> A league of all degrees in the university with each degree having its own domestic tournament to qualify for the championship!
-        With the best team coming out of each major, we will see which degree prevails in the first edition of the annual University Super League!
-      </p>
-      <h1>When It Takes Place</h1>
-      <p class="WWW">
-        The qualifiers are scheduled from September 11th to 25th,
-        with the final tournament set to occur right after reading week.
-        To view the complete timetable, click <a href="">here</a>.</p>
-      <!--make the word 'here' into a link to matches page.-->
-      <h1>Where It's Held</h1>
-      <p class="WWW">Matches will be played at Finsbury Leusire Centre EC1V 3PU,
-        only a 10 minute walk away from City University of London.
-        <br><a href="https://maps.app.goo.gl/XVAyqACdBs6bqVv96" target="_blank">Open Location in Google Maps</a></p>
-    </section>
-
-    <!------------ Knockout Brackets ------------->
-
-    <section class="Knockout">
-
-
-      <img class="MainBracket" src="assets/brackets/Mainbracket.svg" alt="bracket SVG" />
-
-
-
-
-    </section>
-
-
-    <!----------    Select your degree ----------->
-
-
-
-    <section class="select_degree" id="select_degree_id">
-
-
-      <div class="degree_select">
-        <h1>SELECT YOUR DEGREE</h1>
-      </div>
-
-
-      <div class="card_container" onclick="switchPageEngineering()">
-        <div class="degree_title">
-          <h3>Engineering</h3>
-        </div>
-        <div class="image shirt1"></div>
-
-      </div>
-
-      <div class="card_container" onclick="switchPageHuman()">
-        <div class="degree_title">
-          <h3>Human Sciences</h3>
-        </div>
-        <div class="image shirt2"></div>
-
-
-
-      </div>
-
-      <div class="card_container" onclick="switchPageArt()">
-        <div class="degree_title">
-          <h3>Arts & Media</h3>
-        </div>
-        <div class="image shirt3"></div>
-
-
-      </div>
-
-      <div class="card_container" onclick="switchPageLaw()">
-        <div class="degree_title">
-          <h3>Law</h3>
-        </div>
-        <div class="image shirt4"></div>
-
-
-      </div>
-
-      <div class="card_container" onclick="switchPageCS()">
-        <div class="degree_title">
-          <h3>Computer Science</h3>
-        </div>
-        <div class="image shirt5"></a></div>
-
-
-      </div>
-
-      <div class="card_container" onclick="switchPageAccounting()">
-        <div class="degree_title">
-          <h3>Accounting</h3>
-        </div>
-        <div class="image shirt6"></div>
-
-      </div>
-
-      <div class="card_container" onclick="switchPageMaths()">
-        <div class="degree_title">
-          <h3>Mathematics</h3>
-        </div>
-        <div class="image shirt7"></div>
-
-
-      </div>
-
-
-      <div class="card_container" onclick="switchPageBusiness()">
-        <div class="degree_title">
-          <h3>Business</h3>
-        </div>
-        <div class="image shirt8"></div>
-
-
-      </div>
-
-
-
-
-
-
-
-
-
-
-    </section>
-
-    <!-- Footer -->
-
-
-
-    <footer class="footer">
-      <div class="footer_container">
-
-        <div class="f_column">
-          <img class="footer_logo" src="assets/logos/transparent_logo.png" alt="USL">
-          <h4 class="usl_footertitle">University Super League </h4>
-          <p>
-            We are a football tournament that hosts students across different disciplines getting the chance of meeting new
-            people and also having the opportunity to be crowned this year's
-            <span class="footer_champ"> USL Champions! </span>
-
-          </p>
-        </div>
-
-        <div class="f_column">
-          <h4>Browse</h4>
-          <ul>
-            <li><a href="#">Sign Up</a></li>
-            <li><a href="#">Matches</a></li>
-            <li><a href="#">Teams</a></li>
-            <li><a href="#">About Us</a></li>
-          </ul>
-        </div>
-
-        <div class="f_column">
-          <h4>Added Info</h4>
-          <ul>
-            <li><a href="#">Location</a></li>
-            <li><a href="#">Rules</a></li>
-            <li><a href="#">Terms of service</a></li>
-          </ul>
-        </div>
-
-        <div class="f_column">
-          <h4>Follow Us</h4>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-          </div>
         </div>
 
 
-      </div>
-    </footer>
+
+
+
+
+
+
 
 
 
@@ -466,7 +272,7 @@
         console.log(localStorage.getItem("Course"));
         window.location.href = 'SignUp.html';
       }
-      function switchPageLaw(){
+      function switchPageAccounting(){
         localStorage.setItem("Course", "LAW QUALIFIERS");
         console.log(localStorage.getItem("Course"));
         window.location.href = 'SignUp.html';
@@ -476,7 +282,7 @@
         console.log(localStorage.getItem("Course"));
         window.location.href = 'SignUp.html';
       }
-      function switchPageAccounting(){
+      function switchPageLaw(){
         localStorage.setItem("Course", "ACCOUNTING QUALIFIERS");
         console.log(localStorage.getItem("Course"));
         window.location.href = 'SignUp.html';
