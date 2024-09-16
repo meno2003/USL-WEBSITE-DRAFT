@@ -1,4 +1,4 @@
-<html>
+<html></html>
   <head>
     <meta name="viewport" content="width = device-width, initial scale 1.0" />
     <title>USL</title>
@@ -37,39 +37,90 @@
           <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
+        <div><h1 class="Qualifiers">QUALIFIERS TIMETABLE</h1></div>
         <div class="week1Container">
           <div class="week1HeaderContainer">
-            <div><h1 style="color: #fff">WEEK 1</h1></div>
+            <div><h1 class="matches_Text">WEEK 1</h1></div>
           </div>
-          <div class="week1CardContainer"></div>
-          <div class="week1CardContainer"></div>
-          <div class="week1CardContainer"></div>
+          <div class="week1CardContainer">
+            <div class="label"><h1 class="Card_Text">TUE 16 OCT</h1></div>
+           <div class="DegreeHeader"> <h2>Engineering</h2></div>   
+          </div>
+          <div class="week1CardContainer">
+            <div class="label"><h1 class="Card_Text">WED 17 OCT</h1></div>
+            <div class="DegreeHeader"> <h2>Law</h2></div>   
+          </div>
+          <div class="week1CardContainer">
+            <div class="label"><h1 class="Card_Text">FRI 19 OCT</h1></div>
+            <div class="DegreeHeader"> <h2>Mathematics</h2></div>   
+          </div>
         </div>
       </section>
 
       <section class="Week 2">
         <div class="week2Container">
           <div class="week2HeaderContainer">
-            <div><h1 style="color: #fff">WEEK 2</h1></div>
+            <div><h1 class="matches_Text">WEEK 2</h1></div>
           </div>
-          <div class="week2CardContainer"></div>
-          <div class="week2CardContainer"></div>
-          <div class="week2CardContainer"></div>
+          <div class="week1CardContainer">
+            <div class="label"><h1 class="Card_Text">TUE 24 OCT</h1></div>
+            <div class="DegreeHeader"> <h2>Accounting</h2></div>   
+          </div>
+          <div class="week1CardContainer">
+            <div class="label"><h1 class="Card_Text">WED 25 OCT</h1></div>
+            <div class="DegreeHeader"> <h2>Computer Science</h2></div>   
+          </div>
+          <div class="week1CardContainer">
+            <div class="label"><h1 class="Card_Text">FRI 27 OCT</h1></div>
+            <div class="DegreeHeader"> <h2>Business</h2></div>   
+          </div>
         </div>
       </section>
 
       <section class="Week3">
         <div class="week1Container">
           <div class="week1HeaderContainer">
-            <div><h1 style="color: #fff">WEEK 3</h1></div>
+            <div><h1 class="matches_Text">WEEK 3</h1></div>
           </div>
-          <div class="week1CardContainer"></div>
-          <div class="week1CardContainer"></div>
-          <div class="week1CardContainer"></div>
+          <div class="week1CardContainer">
+            <div class="label"><h1 class="Card_Text">MON 30 OCT</h1></div>
+            <div class="DegreeHeader"> <h2>Arts and Media</h2></div>   
+          </div>
+          <div class="week1CardContainer">
+            <div class="label"><h1 class="Card_Text">TUE 1 NOV</h1></div>
+            <div class="DegreeHeader"> <h2>Human Sciences</h2></div>   
+          </div>
+
         </div>
+        <div><h1 class="Qualifiers">USL CUP</h1></div>
+        <div><h1 class="Tobe">To Be Continued...</h1></div>
       </section>
     </div>
-  
+    <script>
+      // What Ijtihad added
+      var navLinks = document.getElementById("navLinks");
+
+      adjustMenu(); // Ensure the menu is correctly displayed based on screen size on page load
+      window.addEventListener('resize', adjustMenu); // Adjust the menu on window resize
+      function adjustMenu() {
+        if (window.innerWidth > 700) {
+          showMenu(); // Show the menu on larger screens
+        } else {
+          hideMenu(); // Hide the menu on smaller screens
+        }
+      }
+
+      function showMenu() {
+        //navLinks.style.right = "0"
+        navLinks.style.display = "flex"
+      }
+
+      function hideMenu() {
+        //navLinks.style.right = "-200px"
+        navLinks.style.display = "none"
+      }
+      </script>
+  </body>
 
   <footer class="footer">
     <div class="footer_container">
@@ -118,29 +169,4 @@
       </div>
     </div>
   </footer>
-  <script>
-    // What Ijtihad added
-    var navLinks = document.getElementById("navLinks");
-
-    adjustMenu(); // Ensure the menu is correctly displayed based on screen size on page load
-    window.addEventListener('resize', adjustMenu); // Adjust the menu on window resize
-    function adjustMenu() {
-      if (window.innerWidth > 700) {
-        showMenu(); // Show the menu on larger screens
-      } else {
-        hideMenu(); // Hide the menu on smaller screens
-      }
-    }
-    function showMenu() {
-        //navLinks.style.right = "0"
-        navLinks.style.display = "flex"
-      }
-
-      function hideMenu() {
-        //navLinks.style.right = "-200px"
-        navLinks.style.display = "none"
-      }
-
-    </script> 
-    </html>
 </html>
