@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+  <script src="https://js.stripe.com/v3/"></script>
 </head>
 
 <body style="background-color: #f7f7f7;">
@@ -83,7 +85,7 @@
 
       <div class="survey_form_styling">
 
-        <form id="survey-form">
+        <form id="survey-form" action="/create-checkout-session" method="POST">
           <!-- To target the form in CSS,  you need to do it like this "#survey-form" and any other elements that has an id-->
           <!-- Label/input for name  -->
           <label for="name" id="name-label">First Name:</label>
@@ -118,7 +120,7 @@
 
 
 
-          <input id = "submit-btn" class="submitbutton" type="submit" value="Pay">
+          <input id = "submit-btn" class="submitbutton" type="submit" value="Pay" >
                     <!-- <script>
                         document.getElementById('submit-btn').addEventListener('click', async function() {
                           // Fetch the checkout session ID from your server
