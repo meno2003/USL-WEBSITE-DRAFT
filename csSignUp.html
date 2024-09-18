@@ -117,23 +117,30 @@
 
 
 
-                    <input id = "submit-btn" class="submitbutton" type="submit" value="Pay">
-                    <script>
-                        document.getElementById('submit-btn').addEventListener('click', async function() {
-                          // Fetch the checkout session ID from your server
-                          const response = await fetch('/create-checkout-session', {
-                            method: 'POST',
-                            headers: {
-                              'Content-Type': 'application/json',
-                            },
-                          });
-                          const session = await response.json();
-                        
-                          // Redirect to Stripe checkout
-                          const stripe = Stripe('pk_live_51PuHlPHThqRnB4qJBgi4Sy5M3m2uIJdVCelHOSbLNc0Qaj56Tdh95UeYiQsb5xYkEZVoXyYnSxnER9mIVR2DE4PC00qHOyvhBx');
-                          stripe.redirectToCheckout({ sessionId: session.id });
-                        });
-                        </script>
+                    <input id = "submit-btn" class="submitbutton" type="submit" value="Pay" >
+          <script>
+            const checkoutButton = document.getElementById('checkout-button');
+    
+            checkoutButton.addEventListener('click', function () {
+              event.preventDefault();
+                fetch('https://usl-website-draft.onrender.com/create-checkout-session', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(session => {
+                  if (session.url) {
+                    window.location.href = session.url; // Redirect to Stripe Checkout
+                  } 
+                  else {
+                    console.error("No URL in response");
+                  }
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        </script>
                 </div>
                 </form>
             </div>
