@@ -296,6 +296,71 @@ p {
   justify-content: center;
   padding-bottom: 20px;
 }
+@media (max-width: 2000px) {
+  .select_degree {
+    width: 90%;
+
+    gap: 5px;
+
+    justify-content: space-evenly;
+
+    align-items: center;
+
+    margin: auto;
+  }
+
+  .card_container {
+    width: calc(20% - 12.5px);
+
+    flex: 0 0 calc(40% - 2.5px);
+
+    max-width: calc(20% - 12.5px);
+  }
+
+  .image {
+    height: 40%;
+
+    width: 60%;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-bottom: 10px;
+  }
+
+  .degree_title h3 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .select_degree {
+    width: 90%;
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+  }
+
+  .card_container {
+    width: calc(25% - 2.5px);
+    flex: 0 0 calc(40% - 2.5px);
+    max-width: calc(25% - 2.5px);
+  }
+
+  .image {
+    height: 40%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  .degree_title h3 {
+    font-size: 12px;
+  }
+}
 
 @media (max-width: 768px) {
   .select_degree {
@@ -630,9 +695,44 @@ ul {
 
 /* WEEK 1 */
 
+.matches_Text {
+  font-size: 75px;
+  color: #fff;
+}
+
+.Card_Text {
+  font-size: 20px;
+  color: #fff;
+}
+
+.Qualifiers {
+  font-size: 130px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 50px;
+  line-height: 130px;
+}
+
+@media (max-width: 768px) {
+  .Qualifiers {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .matches_Text {
+    font-size: 40px;
+    padding: 10px;
+    width: auto;
+  }
+}
+
+.Tobe {
+  padding: 40px;
+}
+
 .week1Header {
   text-align: left;
-  padding-left: 20px;
+  padding-left: 40px;
 }
 
 .week1Container {
@@ -640,10 +740,18 @@ ul {
   width: 100%;
   display: flex;
   justify-content: left;
-  gap: 40px;
+  gap: 10px;
   row-gap: 10px;
   align-items: centre;
   flex-wrap: wrap;
+}
+.DegreeHeader {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  text-align: center;
 }
 
 .week1CardContainer {
@@ -651,7 +759,6 @@ ul {
   height: 300px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 5px;
   background-color: #f9f9f9;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
@@ -660,15 +767,26 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   border-radius: 20px;
-  padding-bottom: 10px;
-  align-items: center;
-  padding-left: 20px;
+  align-items: flex-start;
+  margin: 50px;
+  position: relative;
 }
 .week1HeaderContainer {
   width: 1100px;
   height: 80px;
   padding-left: 30px;
   padding-top: 30px;
+}
+.label {
+  width: 130px;
+  height: 40px;
+  top: -20px;
+  background-color: rgb(213, 32, 32);
+  position: absolute;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Week 2 */
@@ -711,8 +829,9 @@ ul {
 .week2HeaderContainer {
   width: 1100px;
   height: 80px;
-  padding-left: 1000px;
+  padding-left: 900px;
   padding-top: 30px;
+  padding-right: 30px;
 }
 
 .red-bg {
