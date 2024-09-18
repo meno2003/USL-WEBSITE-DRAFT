@@ -19,5 +19,6 @@ post '/create-checkout-session' do
     success_url: YOUR_DOMAIN + '/success.html',
     cancel_url: YOUR_DOMAIN + '/cancel.html',
   })
-  redirect session.url, 303
+  status 200
+  { url: session.url }.to_json # Return the session URL as JSON
 end

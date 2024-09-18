@@ -125,6 +125,7 @@
             const checkoutButton = document.getElementById('checkout-button');
     
             checkoutButton.addEventListener('click', function () {
+              event.preventDefault();
                 fetch('https://usl-website-draft.onrender.com/create-checkout-session', {
                     method: 'POST',
                     headers: {
@@ -133,7 +134,12 @@
                 })
                 .then(response => response.json())
                 .then(session => {
-                    window.location.href = session.url;  // Redirect to Stripe checkout
+                  if (session.url) {
+                    window.location.href = session.url; // Redirect to Stripe Checkout
+                  } 
+                  else {
+                    console.error("No URL in response");
+                  }
                 })
                 .catch(error => console.error('Error:', error));
             });
