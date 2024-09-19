@@ -122,11 +122,11 @@
 
           <input id = "submit-btn" class="submitbutton" type="submit" value="Pay" >
           <script>
-            const checkoutButton = document.getElementById('checkout-button');
+            const checkoutButton = document.getElementById('submit-button');
     
             checkoutButton.addEventListener('click', function () {
               event.preventDefault();
-                fetch('https://usl-website-draft.onrender.com/create-checkout-session', {
+                fetch('https://usl-backend-payments.onrender.com/create-checkout-session', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -135,7 +135,7 @@
                 .then(response => response.json())
                 .then(session => {
                   if (session.url) {
-                    window.location.href = session.url; // Redirect to Stripe Checkout
+                    window.location.href = session.url;
                   } 
                   else {
                     console.error("No URL in response");
