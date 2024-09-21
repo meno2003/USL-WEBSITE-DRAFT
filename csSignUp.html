@@ -16,6 +16,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <script src="https://js.stripe.com/v3/"></script>
+
   </head>
   <body style="background-color: #f7f7f7;">
 
@@ -81,7 +83,7 @@
 
                 <div class="survey_form_styling">
 
-                <form id="survey-form"> <!-- To target the form in CSS,  you need to do it like this "#survey-form" and any other elements that has an id-->
+                <form id="survey-form" action="/create-checkout-session" method="POST"> <!-- To target the form in CSS,  you need to do it like this "#survey-form" and any other elements that has an id-->
                     <!-- Label/input for name  -->
                     <label for="name" id="name-label">First Name:</label>
                     <input type="text" id="name" required placeholder="Enter your Name">
@@ -115,7 +117,30 @@
 
 
 
-                    <input class="submitbutton" type="submit" value="submit">
+                    <input id = "submit-btn" class="submitbutton" type="submit" value="Pay" >
+          <script>
+            const checkoutButton = document.getElementById('checkout-button');
+    
+            checkoutButton.addEventListener('click', function () {
+              event.preventDefault();
+                fetch('https://usl-backend-payments.onrender.com/create-checkout-session', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(session => {
+                  if (session.url) {
+                    window.location.href = session.url; // Redirect to Stripe Checkout
+                  } 
+                  else {
+                    console.error("No URL in response");
+                  }
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        </script>
                 </div>
                 </form>
             </div>
