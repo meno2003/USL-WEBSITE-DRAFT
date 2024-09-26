@@ -90,7 +90,7 @@
 
       <div class="survey_form_styling">
 
-        <form id="survey-form">
+        <form id="survey-form" action="/submit-form-data" method="POST">
           <!-- To target the form in CSS,  you need to do it like this "#survey-form" and any other elements that has an id-->
           <!-- Label/input for name  -->
           <label for="name" id="name-label">First Name:</label>
@@ -124,7 +124,45 @@
 
 
 
-          <input class="submitbutton" type="submit" value="submit">
+          <input id="submit-btn" class="submitbutton" type="submit" value="Submit" onclick="submitData(event)">
+          
+          <script>
+            const checkoutButton = document.getElementById('submit-btn');
+            const form = document.getElementById('survey-form');
+          
+            checkoutButton.addEventListener('click', function (event) {
+              event.preventDefault();  // Prevent default form submission
+              
+              // Trigger Stripe Checkout
+              fetch('https://usl-backend-payments.onrender.com/create-checkout-session', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                }
+              })
+              .then(response => response.json())
+              .then(session => {
+                if (session.url) {
+                  // Redirect to Stripe Checkout
+                  window.location.href = session.url;
+                } else {
+                  console.error("No URL in response");
+                }
+              })
+              .catch(error => console.error('Error:', error));
+            });
+          
+            // On successful payment (e.g., when returning from the success URL)
+            window.addEventListener('load', function () {
+              const urlParams = new URLSearchParams(window.location.search);
+              
+              if (urlParams.get('payment_status') === 'success') {
+                // Automatically submit the form if the payment is successful
+                form.submit();
+              }
+            });
+          </script>
+        </form>
       </div>
     </div>
   </section>
