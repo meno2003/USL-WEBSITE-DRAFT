@@ -59,6 +59,7 @@ nav {
   color: #fff; /* Corrected color value */
   text-decoration: none;
   font-size: 13px;
+  cursor: pointer;
 }
 
 .nav-links ul li:after {
@@ -87,7 +88,7 @@ nav {
 
 .hero_Text h1 {
   font-size: 62px;
-  padding-top: 150px;
+  margin-top: 75px;
 }
 
 .hero_Text p {
@@ -124,7 +125,7 @@ nav .fa {
 
 @media (max-width: 700px) {
   .hero_Text h1 {
-    font-size: 20px;
+    font-size: 40px;
   }
   .nav-links ul li {
     display: block;
@@ -153,6 +154,13 @@ nav .fa {
 
   .nav-links ul {
     padding: 30px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .hero_Text h1 {
+    font-size: 130px;
+    padding-top: 150px;
   }
 }
 
@@ -709,7 +717,8 @@ ul {
   font-size: 130px;
   color: rgb(255, 255, 255);
   text-align: center;
-  padding: 50px;
+  padding: 200px;
+  justify-content: center;
   line-height: 130px;
 }
 
@@ -726,6 +735,30 @@ ul {
   }
 }
 
+@media (max-width: 2000) {
+  .Qualifiers {
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 200px;
+  }
+
+  .matches_Text {
+    font-size: 40px;
+    padding: 10px;
+    width: auto;
+    padding-bottom: 200px;
+  }
+}
+
+.USLCUP_title {
+  font-size: 130px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 100px;
+  justify-content: center;
+  line-height: 130px;
+}
+
 .Tobe {
   padding: 40px;
 }
@@ -736,7 +769,7 @@ ul {
 }
 
 .week1Container {
-  min-height: 80vh;
+  min-height: 40vh;
   width: 100%;
   display: flex;
   justify-content: left;
@@ -752,6 +785,16 @@ ul {
   justify-content: center;
   padding-top: 40px;
   text-align: center;
+}
+.time {
+  font-size: 40px;
+  text-decoration: solid;
+  text-align: left;
+  justify-content: left;
+}
+.location {
+  text-align: left;
+  font-size: 28px;
 }
 
 .week1CardContainer {
@@ -772,7 +815,7 @@ ul {
   position: relative;
 }
 .week1HeaderContainer {
-  width: 1100px;
+  width: 100%;
   height: 80px;
   padding-left: 30px;
   padding-top: 30px;
@@ -797,7 +840,7 @@ ul {
 }
 
 .week2Container {
-  min-height: 80vh;
+  min-height: 40vh;
   width: 100%;
   display: flex;
   justify-content: right;
@@ -827,13 +870,31 @@ ul {
   padding-right: 30px;
 }
 .week2HeaderContainer {
-  width: 1100px;
+  width: 100%;
   height: 80px;
   padding-left: 900px;
   padding-top: 30px;
   padding-right: 30px;
 }
+.matches_Text_Week2 {
+  justify-content: right;
+  text-align: right;
+  font-size: 75px;
+  color: #fff;
+}
 
 .red-bg {
   background-color: #ff3131;
+}
+.tos {
+  color: white;
+  padding: 20px;
+}
+.tos p {
+  color: white;
+}
+
+.about_us_paragraph {
+  padding: 40px;
+  color: white;
 }
