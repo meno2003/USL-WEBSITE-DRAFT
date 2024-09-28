@@ -45,9 +45,4 @@ function submitData(event) {
   });
 }
 
-// Bind submit event when the DOM content is fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('survey-form').addEventListener('submit', submitData);
-
-});
-
+window.submitData = submitData;

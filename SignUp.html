@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
   <head>
     <meta name="viewport" content="width = device-width, initial scale 1.0" />
     <title>University Super League</title>
@@ -115,21 +115,22 @@
           <input id="submit-btn" class="submitbutton" type="submit" value="Submit & Pay" onclick="submitData(event)">
           <p>After clicking "Submit & Pay", please wait while you are redirected to the secure payment page.</p>
           
+
         </form>
       </div>
       </div>
     </section>
-    
+
     <script>
       const checkoutButton = document.getElementById('submit-btn');
       const form = document.getElementById('survey-form');
-    
+
       checkoutButton.addEventListener('click', function (event) {
         event.preventDefault();  // Prevent default form submission
-        
+
         // Save form data in case it's needed after payment
         const formData = new FormData(form);
-    
+
         // Trigger Stripe Checkout
         fetch('https://usl-backend-payments.onrender.com/create-checkout-session', {
           method: 'POST',
@@ -148,17 +149,17 @@
         })
         .catch(error => console.error('Error:', error));
       });
-    
+
       // On successful payment (e.g., when returning from the success URL)
       window.addEventListener('load', function () {
         const urlParams = new URLSearchParams(window.location.search);
-        
+
         if (urlParams.get('payment_status') === 'success') {
           // Use stored form data and submit it
           submitData(new Event('submit'));
-    
+
           // After submitting the form data, redirect to success page
-          window.location.href = '/success.html';  
+          window.location.href = '/success.html';
         }
       });
     </script>
@@ -176,7 +177,7 @@
       <div class="f_column">
         <h4 class="usl_footertitle">University Super League </h4>
         <p>We are a football tournament that hosts students across different disciplines, giving them the chance to meet new
-          people and have the opportunity to be crowned this year's 
+          people and have the opportunity to be crowned this year's
           <span class="footer_champ">USL Champions!</span>
         </p>
       </div>
