@@ -26,7 +26,6 @@ function submitData(event) {
   const surname = document.getElementById('surname').value;
   const email = document.getElementById('email').value;
   const team = document.getElementById('dropdown').value;
-  const teamId = document.getElementById('team-name').value;
 
   // Add data to Firestore
   addDoc(collection(db, 'PlayerDetails'), {
@@ -35,7 +34,6 @@ function submitData(event) {
     email: email,
     degree: localStorage.getItem("Course"),
     team: team,
-    teamId: teamId
   })
   .then((docRef) => {
     console.log('Document written with ID: ', docRef.id);
