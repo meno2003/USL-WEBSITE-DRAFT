@@ -112,32 +112,22 @@
             <option value="Golf">Golf</option>
           </select>
 
-        
-
           <input id="submit-btn" class="submitbutton" type="submit" value="Submit" onclick="submitData(event)">
           
         </form>
       </div>
       </div>
-    
-      <div id="thank-you-message" style="display: none;">Thank you for your submission!</div>
     </section>
     
     <script>
       const checkoutButton = document.getElementById('submit-btn');
       const form = document.getElementById('survey-form');
-      const thankYouMessage = document.getElementById('thank-you-message');
-      const signUpContainer = document.getElementById('sign-up-container'); // Container for form and image
     
-      // Save form data before redirecting to Stripe
       checkoutButton.addEventListener('click', function (event) {
         event.preventDefault();  // Prevent default form submission
-    
-        // Save form data temporarily in localStorage
+        
+        // Save form data in case it's needed after payment
         const formData = new FormData(form);
-        formData.forEach((value, key) => {
-          localStorage.setItem(key, value);  // Save form data to localStorage
-        });
     
         // Trigger Stripe Checkout
         fetch('https://usl-backend-payments.onrender.com/create-checkout-session', {
@@ -158,24 +148,16 @@
         .catch(error => console.error('Error:', error));
       });
     
-      // After successful payment, automatically submit form data using submitData(event)
+      // On successful payment (e.g., when returning from the success URL)
       window.addEventListener('load', function () {
         const urlParams = new URLSearchParams(window.location.search);
-    
+        
         if (urlParams.get('payment_status') === 'success') {
-          // Retrieve saved form data from localStorage and populate form
-          form.querySelectorAll('input, select').forEach(input => {
-            input.value = localStorage.getItem(input.name);
-          });
+          // Use stored form data and submit it
+          submitData(new Event('submit'));
     
-          submitData();  
-    
-          // Hide the entire sign-up container (form + image)
-          signUpContainer.style.display = 'none';  
-
-          thankYouMessage.style.display = 'block';
-    
-          localStorage.clear();
+          // After submitting the form data, redirect to success page
+          window.location.href = '/success.html';  
         }
       });
     </script>
