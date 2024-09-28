@@ -90,9 +90,7 @@
       <img class="CupLift" src="assets/Trophy.jpg" alt="Trophy Lift Image">
 
       <div class="survey_form_styling">
-
         <form id="survey-form" action="/submit-form-data" method="POST">
-          
           <label for="name" id="name-label">First Name:</label>
           <input type="text" id="name" required placeholder="Enter your Name">
 
@@ -114,49 +112,73 @@
             <option value="Golf">Golf</option>
           </select>
 
+        
 
           <input id="submit-btn" class="submitbutton" type="submit" value="Submit" onclick="submitData(event)">
           
-          <script>
-            const checkoutButton = document.getElementById('submit-btn');
-            const form = document.getElementById('survey-form');
-          
-            checkoutButton.addEventListener('click', function (event) {
-              event.preventDefault();  // Prevent default form submission
-              
-              // Trigger Stripe Checkout
-              fetch('https://usl-backend-payments.onrender.com/create-checkout-session', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json'
-                }
-              })
-              .then(response => response.json())
-              .then(session => {
-                if (session.url) {
-                  // Redirect to Stripe Checkout
-                  window.location.href = session.url;
-                } else {
-                  console.error("No URL in response");
-                }
-              })
-              .catch(error => console.error('Error:', error));
-            });
-          
-            // On successful payment (e.g., when returning from the success URL)
-            window.addEventListener('load', function () {
-              const urlParams = new URLSearchParams(window.location.search);
-              
-              if (urlParams.get('payment_status') === 'success') {
-                // Automatically submit the form if the payment is successful
-                form.submit();
-              }
-            });
-          </script>
         </form>
       </div>
-    </div>
-  </section>
+      </div>
+    
+      <div id="thank-you-message" style="display: none;">Thank you for your submission!</div>
+    </section>
+    
+    <script>
+      const checkoutButton = document.getElementById('submit-btn');
+      const form = document.getElementById('survey-form');
+      const thankYouMessage = document.getElementById('thank-you-message');
+      const signUpContainer = document.getElementById('sign-up-container'); // Container for form and image
+    
+      // Save form data before redirecting to Stripe
+      checkoutButton.addEventListener('click', function (event) {
+        event.preventDefault();  // Prevent default form submission
+    
+        // Save form data temporarily in localStorage
+        const formData = new FormData(form);
+        formData.forEach((value, key) => {
+          localStorage.setItem(key, value);  // Save form data to localStorage
+        });
+    
+        // Trigger Stripe Checkout
+        fetch('https://usl-backend-payments.onrender.com/create-checkout-session', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(response => response.json())
+        .then(session => {
+          if (session.url) {
+            // Redirect to Stripe Checkout
+            window.location.href = session.url;
+          } else {
+            console.error("No URL in response");
+          }
+        })
+        .catch(error => console.error('Error:', error));
+      });
+    
+      // After successful payment, automatically submit form data using submitData(event)
+      window.addEventListener('load', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+    
+        if (urlParams.get('payment_status') === 'success') {
+          // Retrieve saved form data from localStorage and populate form
+          form.querySelectorAll('input, select').forEach(input => {
+            input.value = localStorage.getItem(input.name);
+          });
+    
+          submitData();  
+    
+          // Hide the entire sign-up container (form + image)
+          signUpContainer.style.display = 'none';  
+
+          thankYouMessage.style.display = 'block';
+    
+          localStorage.clear();
+        }
+      });
+    </script>
 
 
 
