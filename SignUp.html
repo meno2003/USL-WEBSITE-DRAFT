@@ -131,7 +131,14 @@
         // Save form data in case it's needed after payment
         const formData = new FormData(form);
 
-        // Trigger Stripe Checkout
+        localStorage.setItem('USL_PLAYER_NAME', document.getElementById('name').value);
+        localStorage.setItem('USL_PLAYER_SURNAME', document.getElementById('surname').value);
+        localStorage.setItem('USL_PLAYER_EMAIL', document.getElementById('email').value);
+        localStorage.setItem('USL_PLAYER_TEAM', document.getElementById('dropdown').value);
+
+        console.log(localStorage.getItem("USL_PLAYER_NAME"));
+
+        //Trigger Stripe Checkout
         fetch('https://usl-backend-payments.onrender.com/create-checkout-session', {
           method: 'POST',
           headers: {
@@ -156,7 +163,7 @@
 
         if (urlParams.get('payment_status') === 'success') {
           // Use stored form data and submit it
-          submitData(new Event('submit'));
+          //submitData(new Event('submit'));
 
           // After submitting the form data, redirect to success page
           window.location.href = '/success.html';
@@ -258,7 +265,6 @@
 
 
   </script>
-  <script type="module" src="submit_data.js"></script>
 
 </body>
 
