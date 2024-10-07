@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
   <head>
     <meta name="viewport" content="width = device-width, initial scale 1.0" />
     <title>University Super League</title>
@@ -112,50 +112,64 @@
             <option value="Golf">Golf</option>
           </select>
 
-        
+          <input id="submit-btn" class="submitbutton" type="submit" value="Submit & Pay" onclick="submitData(event)">
+          <p>After clicking "Submit & Pay", please wait while you are redirected to the secure payment page.</p>
+          
 
-          <input id="submit-btn" class="submitbutton" type="submit" value="Submit" onclick="submitData(event)">
-          
-          <script>
-            const checkoutButton = document.getElementById('submit-btn');
-            const form = document.getElementById('survey-form');
-          
-            checkoutButton.addEventListener('click', function (event) {
-              event.preventDefault();  // Prevent default form submission
-              
-              // Trigger Stripe Checkout
-              fetch('https://usl-backend-payments.onrender.com/create-checkout-session', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json'
-                }
-              })
-              .then(response => response.json())
-              .then(session => {
-                if (session.url) {
-                  // Redirect to Stripe Checkout
-                  window.location.href = session.url;
-                } else {
-                  console.error("No URL in response");
-                }
-              })
-              .catch(error => console.error('Error:', error));
-            });
-          
-            // On successful payment (e.g., when returning from the success URL)
-            window.addEventListener('load', function () {
-              const urlParams = new URLSearchParams(window.location.search);
-              
-              if (urlParams.get('payment_status') === 'success') {
-                // Automatically submit the form if the payment is successful
-                form.submit();
-              }
-            });
-          </script>
         </form>
       </div>
-    </div>
-  </section>
+      </div>
+    </section>
+
+    <script>
+      const checkoutButton = document.getElementById('submit-btn');
+      const form = document.getElementById('survey-form');
+
+      checkoutButton.addEventListener('click', function (event) {
+        event.preventDefault();  // Prevent default form submission
+
+        // Save form data in case it's needed after payment
+        const formData = new FormData(form);
+
+        localStorage.setItem('USL_PLAYER_NAME', document.getElementById('name').value);
+        localStorage.setItem('USL_PLAYER_SURNAME', document.getElementById('surname').value);
+        localStorage.setItem('USL_PLAYER_EMAIL', document.getElementById('email').value);
+        localStorage.setItem('USL_PLAYER_TEAM', document.getElementById('dropdown').value);
+
+        console.log(localStorage.getItem("USL_PLAYER_NAME"));
+
+        //Trigger Stripe Checkout
+        fetch('https://usl-backend-payments.onrender.com/create-checkout-session', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(response => response.json())
+        .then(session => {
+          if (session.url) {
+            // Redirect to Stripe Checkout
+            window.location.href = session.url;
+          } else {
+            console.error("No URL in response");
+          }
+        })
+        .catch(error => console.error('Error:', error));
+      });
+
+      // On successful payment (e.g., when returning from the success URL)
+      window.addEventListener('load', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+
+        if (urlParams.get('payment_status') === 'success') {
+          // Use stored form data and submit it
+          //submitData(new Event('submit'));
+
+          // After submitting the form data, redirect to success page
+          window.location.href = '/success.html';
+        }
+      });
+    </script>
 
 
 
@@ -171,7 +185,7 @@
         <img class="footer_logo" src="assets/logos/transparent_logo.png" alt="USL">
         <h4 class="usl_footertitle">University Super League </h4>
         <p>We are a football tournament that hosts students across different disciplines, giving them the chance to meet new
-          people and have the opportunity to be crowned this year's 
+          people and have the opportunity to be crowned this year's
           <span class="footer_champ">USL Champions!</span>
         </p>
       </div>
@@ -252,7 +266,6 @@
 
 
   </script>
-  <script type="module" src="submit_data.js"></script>
 
 </body>
 

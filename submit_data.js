@@ -17,25 +17,29 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Function to submit form data to Firestore
-function submitData(event) {
-  event.preventDefault(); // Prevent the default form submission behavior
+// Function to submit data to Firestore
+function submitData() {
+  // Get data from localStorage
+  const name = localStorage.getItem("USL_PLAYER_NAME");
+  const surname = localStorage.getItem("USL_PLAYER_SURNAME");
+  const email = localStorage.getItem("USL_PLAYER_EMAIL");
+  const degree = localStorage.getItem("Course");
+  const team = localStorage.getItem("USL_PLAYER_TEAM");
 
-  // Get form values
-  const name = document.getElementById('name').value;
-  const surname = document.getElementById('surname').value;
-  const email = document.getElementById('email').value;
-  const team = document.getElementById('dropdown').value;
-  const teamId = document.getElementById('team-name').value;
+  // Ensure all required localStorage items are available
+  if (!name || !surname || !email || !degree || !team) {
+    console.error('One or more localStorage items are missing.');
+    alert('Error: Missing data. Please make sure all required fields are filled out.');
+    return;
+  }
 
   // Add data to Firestore
   addDoc(collection(db, 'PlayerDetails'), {
     name: name,
     surname: surname,
     email: email,
-    degree: localStorage.getItem("Course"),
+    degree: degree,
     team: team,
-    teamId: teamId
   })
   .then((docRef) => {
     console.log('Document written with ID: ', docRef.id);
@@ -47,9 +51,11 @@ function submitData(event) {
   });
 }
 
-// Bind submit event when the DOM content is fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('survey-form').addEventListener('submit', submitData);
+// Call submitData only if the current page is success.html
+window.onload = function() {
+  const currentPage = window.location.pathname;
 
-});
-
+  if (currentPage.includes('success.html')) {
+    submitData();
+  }
+};
