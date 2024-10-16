@@ -715,17 +715,16 @@ ul {
 }
 
 .Qualifiers {
-  font-size: 130px;
+  font-size: 75px;
   color: rgb(255, 255, 255);
   text-align: center;
-  padding: 200px;
   justify-content: center;
   line-height: 130px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .Qualifiers {
-    font-size: 60px;
+    font-size: 30px;
     line-height: 60px;
   }
 
@@ -898,4 +897,12 @@ ul {
 .about_us_paragraph {
   padding: 40px;
   color: white;
+}
+
+.about_us_1 {
+  max-width: 50%;
+  max-height: 50%;
+  display: block;
+  margin: auto;
+  padding-bottom: 20px;
 }
